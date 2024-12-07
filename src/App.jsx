@@ -10,16 +10,17 @@ import {useState} from "react";
 
 function App() {
 
-  const [mousePosition, setMousePosition] = useState({x: 0, y:0})
+  const [mousePosition, setMousePosition] = useState({x: null, y:null})
   const handleMouseMove = (e) => {
-    setMousePosition({x: e.clientX, y:e.clientY})
+    setMousePosition({x: e.pageX, y:e.pageY})
   }
 
   return (
     <div 
      className="app-cont" 
      onMouseMove={handleMouseMove} 
-     onScroll  ={handleMouseMove}
+     onScroll={handleMouseMove}
+     onWheel={handleMouseMove}
      >
       <Visual />
       <History />
