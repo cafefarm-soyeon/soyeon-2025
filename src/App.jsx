@@ -6,18 +6,30 @@ import History from "./components/History";
 import Project from "./components/Project";
 import Skiils from "./components/Skills";
 import Footer from "./components/Footer";
+import {useState} from "react";
 
 function App() {
 
+  const [mousePosition, setMousePosition] = useState({x: 0, y:0})
+  const handleMouseMove = (e) => {
+    setMousePosition({x: e.clientX, y:e.clientY})
+  }
+
   return (
-    <>
+    <div 
+     className="app-cont" 
+     onMouseMove={handleMouseMove} 
+     onScroll  ={handleMouseMove}
+     >
       <Visual />
       <History />
       <Project />
       <Skiils />
       <Footer />
-      <Cursor />
-    </>
+      <Cursor 
+        left={mousePosition.x} 
+        top={mousePosition.y} />
+    </div>
   )
 }
 

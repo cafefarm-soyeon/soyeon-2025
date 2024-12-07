@@ -1,25 +1,11 @@
 import "../../public/css/invertCursor.css"
 
-const Cursor = () => {
-  
-  document.body.onmousemove = function(e) {
-    document.documentElement.style.setProperty (
-      '--x', (
-        e.clientX+window.scrollX
-      )
-      + 'px'
-    );
-    document.documentElement.style.setProperty (
-      '--y', (
-        e.clientY+window.scrollY
-      ) 
-      + 'px'
-    );
-  }
+const Cursor = ({left, top}) => {
 
   return(
     <>
-      <div id="cursor" ></div>
+      <div id="cursor" style={{top:top, left:left}} >
+      </div>
     </>
   )
 }
