@@ -5,7 +5,7 @@ body{
 #cursor{
   content:'';
   display:block;
-  position:absolute;
+  position:fixed;
   width: 40px;
   height:40px;
   background:#ff2323;
@@ -21,7 +21,7 @@ body{
 #cursor:after{
   content:'';
   display:block;
-  position:absolute;
+  position:fixed;
   width:42px;
   height:42px;
   border:1px solid #ff2323;

@@ -12,7 +12,7 @@ function App() {
 
   const [mousePosition, setMousePosition] = useState({x: null, y:null})
   const handleMouseMove = (e) => {
-    setMousePosition({x: e.pageX, y:e.pageY})
+    setMousePosition({x: e.clientX, y:e.clientY})
   }
 
   return (
