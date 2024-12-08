@@ -19,8 +19,6 @@ function App() {
     <div 
      className="app-cont" 
      onMouseMove={handleMouseMove} 
-     onScroll={handleMouseMove}
-     onWheel={handleMouseMove}
      >
       <Visual />
       <History />

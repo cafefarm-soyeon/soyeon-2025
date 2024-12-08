@@ -14,11 +14,12 @@
   --color-grayscale-03: #666;
   --color-grayscale-04: #ddd;
   --color-grayscale-05: #fff;
+  --color-primary-00: #27797d; 
+  --color-primary-01: #16325B; 
+  --color-primary-02: #227B94; 
+  --color-primary-03: #20877e; 
+  --color-primary-04: #FFDC7F; 
 
-  --color-primary-01: #7593FF; 
-  --color-primary-02: #406aff; 
-  --color-primary-03: #5472EA; 
-  --color-primary-04: #2152ff; 
   --color-secondary-01: #48caca; 
   --color-secondary-02: #00b98c; 
   --color-secondary-03: #F54335;
@@ -37,12 +38,12 @@
 @font-face{font-family: BMDOHYEON; src:url(../font/BMDOHYEON_ttf.ttf) format('truetype');; font-weight:bold;}
 
 /* body */
-body{font-size:16px; font-family: NanumBarunGothic;}
+body{font-size:16px; font-family: NanumBarunGothic; }
 
 /* scroll bar */
-*::-webkit-scrollbar{width:9px; height:9px;}
-*::-webkit-scrollbar-track{background:var( --color-grayscale-04); border-radius:12px;}
-*::-webkit-scrollbar-thumb{background:var( --color-grayscale-03); border-radius: 12px;}
+body::-webkit-scrollbar{width:9px; height:9px;}
+body::-webkit-scrollbar-track{background:var( --color-grayscale-04); border-radius:12px;}
+body::-webkit-scrollbar-thumb{background:var( --color-grayscale-03); border-radius: 12px;}
 
 /*font*/
 .title{ font-family:BMDOHYEON;}
@@ -199,6 +200,16 @@ body{font-size:16px; font-family: NanumBarunGothic;}
 /***********/
 /* custom */
 /***********/
-.title{display:block; text-align:center; padding:40px 0; font-size:32px; font-weight:bold;}
-section.part{width:100%; height: 70vh; border-bottom:1px solid #fff; background:#000; color:#fff;}
 
+.title{display:block; text-align:center; padding-bottom:40px; font-size:32px; font-weight:bold;}
+.part{width:100%; height: 100vh; padding:50px; background:var( --color-grayscale-02); color:#fff;}
+.visual{background:var(--color-primary-00);}
+.history{background:var(--color-primary-01); }
+/* project */
+.project{background:var(--color-primary-02); overflow:hidden;  }
+.project-wrap{}
+.project-cont{}
+.project-cont ul{}
+
+.skills{background:var(--color-primary-03); }
+.footer{height:30vh;background:var(--color-primary-04); color:#333;}

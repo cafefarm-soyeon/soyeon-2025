@@ -8,8 +8,7 @@ body{
   position:absolute;
   width: 40px;
   height:40px;
-  background:#fff;
-  border:2px solid #000;
+  background:#ff2323;
   border-radius:50%;
    /* top:var(--y, 0);
   left:var(--x, 0);  */
@@ -25,7 +24,7 @@ body{
   position:absolute;
   width:42px;
   height:42px;
-  border:1px solid #fff;
+  border:1px solid #ff2323;
   border-radius:50%;
   top:50%;
   left:50%;
