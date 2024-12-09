@@ -8,7 +8,7 @@ body{
   position:fixed;
   width: 40px;
   height:40px;
-  background:#ff2323;
+  background:#ff0000;
   border-radius:50%;
    /* top:var(--y, 0);
   left:var(--x, 0);  */
@@ -24,7 +24,7 @@ body{
   position:fixed;
   width:20px;
   height:20px;
-  border:2px solid #ff2323;
+  border:2px solid #ff0000;
   border-radius:50%;
   top:50%;
   left:50%;

@@ -10,7 +10,7 @@ const Visual = () => {
     document.getElementById("forest").style.top = value * - 0.15 + "px";
     document.getElementById("forestBg").style.height = value * 0.2 + 'px';
 
-    document.getElementById("sun").style.top = value * 0.8 + 'px';
+    document.getElementById("sun").style.top = value * 0.7 + 'px';
     document.getElementById("bird").style.top = value * 0.55 + 'px';
 
     document.getElementById("river").style.top = value * -0.06 + 'px';
