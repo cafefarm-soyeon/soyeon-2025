@@ -3,14 +3,17 @@ const Visual = () => {
   window.addEventListener('scroll', function(){
     let value = window.scrollY;
     //console.log(value);
+    document.getElementById("cloud1").style.top = value * - 0.15 + "px";
+    document.getElementById("cloud2").style.top = value * - 0.15 + "px";
+    document.getElementById("cloud3").style.top = value * 0.4 + "px";
 
     document.getElementById("forest").style.top = value * - 0.15 + "px";
     document.getElementById("forestBg").style.height = value * 0.2 + 'px';
 
     document.getElementById("sun").style.top = value * 0.8 + 'px';
-    document.getElementById("bird").style.top = value * 0.5 + 'px';
+    document.getElementById("bird").style.top = value * 0.55 + 'px';
 
-    document.getElementById("river").style.top = value * 0.1 + 'px';
+    document.getElementById("river").style.top = value * -0.06 + 'px';
     document.getElementById("text").style.marginTop = value * -1.2 + 'px';
 
     // cloud1.style.top = value * 0.3 + 'px';

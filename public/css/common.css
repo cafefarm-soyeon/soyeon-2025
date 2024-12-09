@@ -217,8 +217,9 @@ body::-webkit-scrollbar-thumb{background:var( --color-grayscale-03); border-radi
 .history{background:var(--color-primary-01); position:relative; z-index:30; }
 
 /* project */
-.project{background:var(--color-primary-02); overflow:hidden;  }
+.project{background:var(--color-primary-02); overflow:hidden; position:relative;  z-index:40; }
 
 
-.skills{background:var(--color-primary-03); }
+.skills{background:var(--color-primary-03); position:relative; z-index:50;}
+
 .footer{height:30vh;background:var(--color-primary-04); color:#333;}
