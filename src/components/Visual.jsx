@@ -19,11 +19,12 @@ const Visual = () => {
     cloud2.current.style.setProperty('top', value * - 0.1 + "px");
     cloud3.current.style.setProperty('top', value * 0.4 + "px");
 
-    forest.current.style.setProperty('top', value * - 0.15 + "px");
-    forestBg.current.style.setProperty('height', value * 0.2 + "px");
+    forest.current.style.setProperty('top', value * - 0.25 + "px");
+    forestBg.current.style.setProperty('height', value * 0.3 + "px");
 
     sun.current.style.setProperty('top', value * 0.7 + "px");
-    bird.current.style.setProperty('top', value * 0.65 + "px");
+    bird.current.style.setProperty('top', value * -0.25 + "px");
+
 
     river.current.style.setProperty('top', value * -0.15 + "px");
     text.current.style.setProperty('margin-top', value * 0.7 + "px");
