@@ -8,9 +8,12 @@ const Visual = () => {
   const forest = useRef(null);
   const forestBg = useRef(null);
   const sun = useRef(null);
-  const bird = useRef(null);
+  const splash1 = useRef(null);
+  const splash2 = useRef(null);
   const river = useRef(null);
   const text = useRef(null);
+  const bird1 = useRef(null);
+  const bird2 = useRef(null);
 
   window.addEventListener('scroll', function(){
     let value = window.scrollY;
@@ -18,16 +21,20 @@ const Visual = () => {
     cloud1.current.style.setProperty('top', value * - 0.2 + "px");
     cloud2.current.style.setProperty('top', value * - 0.1 + "px");
     cloud3.current.style.setProperty('top', value * 0.4 + "px");
+    sun.current.style.setProperty('top', value * 0.7 + "px");
 
     forest.current.style.setProperty('top', value * - 0.25 + "px");
     forestBg.current.style.setProperty('height', value * 0.3 + "px");
 
-    sun.current.style.setProperty('top', value * 0.7 + "px");
-    bird.current.style.setProperty('top', value * -0.25 + "px");
-
-
+    splash1.current.style.setProperty('top', value * -0.53 + "px");
+    splash2.current.style.setProperty('top', value * -0.53 + "px");
     river.current.style.setProperty('top', value * -0.15 + "px");
     text.current.style.setProperty('margin-top', value * 0.7 + "px");
+
+    bird1.current.style.setProperty('top', value * -0.7 + "px");
+    bird1.current.style.setProperty('left', value * 0.8 + "px");
+    bird2.current.style.setProperty('top', value * -0.6 + "px");
+    bird2.current.style.setProperty('left', value * 0.6 + "px");
 
   });
 
@@ -46,14 +53,16 @@ const Visual = () => {
       <div className="space stars3"></div>
       <img src="../../public/image/sun.png" alt="해" ref={sun}/>
       <img src="../../public/image/mountain1.png" alt="산1" />
-      <img src="../../public/image/mountain2.png" alt="산2" />
       <p className="visual-text" ref={text} >Soyeon&#39;s Home</p>
+      <img src="../../public/image/splash01.png" ref={splash1} alt="물방울1" />
+      <img src="../../public/image/splash02.png" ref={splash2} alt="물방울2" />
       <img src="../../public/image/river.png" alt="강" ref={river} />
       <img src="../../public/image/mountain3.png" alt="산3" />
       <img src="../../public/image/mountain4.png" alt="산4" />
       <img src="../../public/image/forest.png" className="forest" alt="숲" ref={forest}  />
       <div className="forestBg" ref={forestBg}></div>
-      <img src="../../public/image/bird.png" className="bird" alt="새" ref={bird} />
+      <img src="../../public/image/bird1.png" className="bird" alt="새" ref={bird1} />
+      <img src="../../public/image/bird2.png" className="bird" alt="새" ref={bird2} />
     </section>
     </>
   );
