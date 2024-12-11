@@ -53,7 +53,7 @@ const Visual = () => {
       <div className="space stars3"></div>
       <img src="../../public/image/sun.png" alt="해" ref={sun}/>
       <img src="../../public/image/mountain1.png" alt="산1" />
-      <p className="visual-text" ref={text} >Soyeon&#39;s Home</p>
+      <p className="visual-text" ref={text} >Soyeon&#39;s Forest</p>
       <img src="../../public/image/splash01.png" ref={splash1} alt="물방울1" />
       <img src="../../public/image/splash02.png" ref={splash2} alt="물방울2" />
       <img src="../../public/image/river.png" alt="강" ref={river} />
