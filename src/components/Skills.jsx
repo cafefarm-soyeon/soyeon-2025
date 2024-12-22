@@ -5,15 +5,15 @@ const Skills = () => {
     <>
     <section className="part skills">
       <p className="title">skills</p>
-      <div className="skills-wrap flex flex-column gap-20">
+      <div className="skills-wrap flex flex-wrap">
         { dataSkills.map((item) => {
           return(
-            <ul key={item.id} className="flex gap-20">
-              <li className="fs-26">{item.group}</li>
-              <li className="flex gap-15">
+            <ul key={item.id} className="skills-cont flex flex-column">
+              <li className="flex just-cont-center group">{item.group}</li>
+              <li className="flex flex-column list">
                 {item.list.map((lists)=> {
                   return(
-                    <span key={lists}>{lists}</span>
+                    <span className="flex just-cont-center" key={lists}>{lists}</span>
                   )
                 })}
               </li>

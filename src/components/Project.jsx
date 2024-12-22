@@ -4,16 +4,16 @@ const Project = () => {
   return(
     <>
       <section className="part project">
-        <div className="project-wrap">
+        <div>
           <p className="title">project</p>
-          <div className="project-cont flex flex-column">
+          <div className="project-wrap flex flex-wrap">
             {dataProject.map((item)=>{
               return(
-              <ul key={item.id}>
-                <li className="fw-bold">{item.title}</li>
-                <li>{item.date}</li>
-                <li>{item.order}</li>
-                <li>{item.work}</li>
+              <ul className="project-cont" key={item.id}>
+                <li className="s-title">{item.title}</li>
+                <li className="date">{item.date}</li>
+                <li className="order">{item.order}</li>
+                <li className="work">{item.work}</li>
               </ul>
               )
             })}
