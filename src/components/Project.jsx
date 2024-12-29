@@ -1,6 +1,6 @@
 import { dataProject } from "../util/dataProject";
 
-const Project = () => {
+const Project = ({mouseClassOn, mouseClassOff}) => {
   return(
     <>
       <section className="part project">
@@ -9,7 +9,12 @@ const Project = () => {
           <div className="project-wrap flex flex-wrap">
             {dataProject.map((item)=>{
               return(
-              <ul className="project-cont" key={item.id}>
+              <ul 
+                className="project-cont" 
+                key={item.id} 
+                onMouseEnter={mouseClassOn}
+                onMouseLeave={mouseClassOff}
+              >
                 <li className="s-title">{item.title}</li>
                 <li className="date">{item.date}</li>
                 <li className="order">{item.order}</li>

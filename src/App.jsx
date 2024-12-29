@@ -15,6 +15,14 @@ function App() {
     setMousePosition({x: e.clientX, y:e.clientY})
   }
 
+  const [mouseClassName, setMouseClassName] = useState('normal');
+  const mouseClassOn = () => {
+    setMouseClassName('extend');
+  }
+  const mouseClassOff = () => {
+    setMouseClassName('');
+  }
+
   return (
     <div 
      className="app-cont" 
@@ -22,12 +30,13 @@ function App() {
      >
       <Visual />
       <History />
-      <Project />
-      <Skiils />
+      <Project mouseClassOn={mouseClassOn} mouseClassOff={mouseClassOff} />
+      <Skiils/>
       <Footer />
       <Cursor 
         left={mousePosition.x} 
-        top={mousePosition.y} />
+        top={mousePosition.y}
+        mouseClassName={mouseClassName} />
     </div>
   )
 }

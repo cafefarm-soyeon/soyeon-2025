@@ -33,6 +33,10 @@ body{
   animation: mouse-move 1.5s linear infinite ;
 }
 
+#cursor.extend{
+  width:80px;
+  height:80px;
+}
 
 
 @keyframes mouse-move {
