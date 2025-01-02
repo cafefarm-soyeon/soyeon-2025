@@ -16,6 +16,7 @@ body{
   z-index:999;
   mix-blend-mode:difference;
   transition: transform .2s;
+  pointer-events: none;
 }
 
 #cursor:after{
@@ -34,10 +35,13 @@ body{
 }
 
 #cursor.extend{
-  width:80px;
-  height:80px;
+  width:70px;
+  height:70px;
+  background:#640c8d
 }
-
+#cursor.extend:after{
+  content:none;
+}
 
 @keyframes mouse-move {
   0%{opacity:1;}

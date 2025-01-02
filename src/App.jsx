@@ -10,11 +10,12 @@ import {useState} from "react";
 
 function App() {
 
+  // 커서 위치
   const [mousePosition, setMousePosition] = useState({x: null, y:null})
   const handleMouseMove = (e) => {
     setMousePosition({x: e.clientX, y:e.clientY})
   }
-
+ // 커서 클래스
   const [mouseClassName, setMouseClassName] = useState('normal');
   const mouseClassOn = () => {
     setMouseClassName('extend');
@@ -29,9 +30,9 @@ function App() {
      onMouseMove={handleMouseMove} 
      >
       <Visual />
-      <History />
+      <History mouseClassOn={mouseClassOn} mouseClassOff={mouseClassOff} />
       <Project mouseClassOn={mouseClassOn} mouseClassOff={mouseClassOff} />
-      <Skiils/>
+      <Skiils mouseClassOn={mouseClassOn} mouseClassOff={mouseClassOff} />
       <Footer />
       <Cursor 
         left={mousePosition.x} 
