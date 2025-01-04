@@ -15,10 +15,10 @@ const Project = ({mouseClassOn, mouseClassOff}) => {
                 onMouseEnter={mouseClassOn}
                 onMouseLeave={mouseClassOff}
               >
-                <li className="s-title">{item.title}</li>
-                <li className="date">{item.date}</li>
-                <li className="order">{item.order}</li>
-                <li className="work">{item.work}</li>
+                <li className="project-name">{item.title}</li>
+                <li className="date">진행기간: {item.date}</li>
+                <li className="order">고객사: {item.order}</li>
+                <li className="work">담당업무: {item.work}</li>
               </ul>
               )
             })}
