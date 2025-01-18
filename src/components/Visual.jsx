@@ -19,7 +19,7 @@ const Visual = () => {
     useEffect(() => {
       const handleScroll = throttle(() => {
         const scrollY = window.scrollY;
-        //console.log(scrollY);
+        console.log(scrollY);
 
           cloud1.current.style.top = scrollY * - 0.2 + "px";
           cloud2.current.style.top = scrollY * - 0.1 + "px";
@@ -39,7 +39,7 @@ const Visual = () => {
           bird2.current.style.top = scrollY * -0.6 + "px";
           bird2.current.style.left = scrollY  * 0.6 + "px";
 
-      },50); // 실행 단위
+      },10); // 실행 단위
       
       window.addEventListener("scroll", handleScroll);
  
