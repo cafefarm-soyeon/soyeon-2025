@@ -1,42 +1,76 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+import { throttle } from "lodash";
 
 const Visual = () => {
-  
-  const cloud1 = useRef(null);
-  const cloud2 = useRef(null);
-  const cloud3 = useRef(null);
-  const forest = useRef(null);
-  const forestBg = useRef(null);
-  const sun = useRef(null);
-  const splash1 = useRef(null);
-  const splash2 = useRef(null);
-  const river = useRef(null);
-  const text = useRef(null);
-  const bird1 = useRef(null);
-  const bird2 = useRef(null);
 
-  window.addEventListener('scroll', function(){
-    let value = window.scrollY;
+    const cloud1 = useRef(null);
+    const cloud2 = useRef(null);
+    const cloud3 = useRef(null);
+    const forest = useRef(null);
+    const forestBg = useRef(null);
+    const sun = useRef(null);
+    const splash1 = useRef(null);
+    const splash2 = useRef(null);
+    const river = useRef(null);
+    const text = useRef(null);
+    const bird1 = useRef(null);
+    const bird2 = useRef(null);
+    
+    useEffect(() => {
+      const handleScroll = throttle(() => {
+        const scrollY = window.scrollY;
+        //console.log(scrollY);
 
-    cloud1.current.style.setProperty('top', value * - 0.2 + "px");
-    cloud2.current.style.setProperty('top', value * - 0.1 + "px");
-    cloud3.current.style.setProperty('top', value * 0.4 + "px");
-    sun.current.style.setProperty('top', value * 0.7 + "px");
+          cloud1.current.style.top = scrollY * - 0.2 + "px";
+          cloud2.current.style.top = scrollY * - 0.1 + "px";
+          cloud3.current.style.top = scrollY * 0.4 + "px";
+          sun.current.style.top = scrollY * 0.7 + "px";
 
-    forest.current.style.setProperty('top', value * - 0.25 + "px");
-    forestBg.current.style.setProperty('height', value * 0.3 + "px");
+          forest.current.style.top = scrollY * - 0.25 + "px";
+          forestBg.current.style.height = scrollY * 0.3 + "px";
 
-    splash1.current.style.setProperty('top', value * -0.53 + "px");
-    splash2.current.style.setProperty('top', value * -0.53 + "px");
-    river.current.style.setProperty('top', value * -0.15 + "px");
-    text.current.style.setProperty('margin-top', value * 0.7 + "px");
+          splash1.current.style.top = scrollY * -0.53 + "px";
+          splash2.current.style.top = scrollY * -0.53 + "px";
+          river.current.style.top = scrollY * -0.15 + "px";
+          text.current.style.marginTop = scrollY * 0.7 + "px";
 
-    bird1.current.style.setProperty('top', value * -0.7 + "px");
-    bird1.current.style.setProperty('left', value * 0.8 + "px");
-    bird2.current.style.setProperty('top', value * -0.6 + "px");
-    bird2.current.style.setProperty('left', value * 0.6 + "px");
+          bird1.current.style.top = scrollY * -0.7 + "px";
+          bird1.current.style.left = scrollY  * 0.8 + "px";
+          bird2.current.style.top = scrollY * -0.6 + "px";
+          bird2.current.style.left = scrollY  * 0.6 + "px";
 
-  });
+      },50); // 실행 단위
+      
+      window.addEventListener("scroll", handleScroll);
+ 
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
+
+
+  // window.addEventListener('scroll', function(){
+  //   let value = window.scrollY;
+
+  //   cloud1.current.style.setProperty('top', value * - 0.2 + "px");
+  //   cloud2.current.style.setProperty('top', value * - 0.1 + "px");
+  //   cloud3.current.style.setProperty('top', value * 0.4 + "px");
+  //   sun.current.style.setProperty('top', value * 0.7 + "px");
+
+  //   forest.current.style.setProperty('top', value * - 0.25 + "px");
+  //   forestBg.current.style.setProperty('height', value * 0.3 + "px");
+
+  //   splash1.current.style.setProperty('top', value * -0.53 + "px");
+  //   splash2.current.style.setProperty('top', value * -0.53 + "px");
+  //   river.current.style.setProperty('top', value * -0.15 + "px");
+  //   text.current.style.setProperty('margin-top', value * 0.7 + "px");
+
+  //   bird1.current.style.setProperty('top', value * -0.7 + "px");
+  //   bird1.current.style.setProperty('left', value * 0.8 + "px");
+  //   bird2.current.style.setProperty('top', value * -0.6 + "px");
+  //   bird2.current.style.setProperty('left', value * 0.6 + "px");
+
+  // });
 
   return(
     <>

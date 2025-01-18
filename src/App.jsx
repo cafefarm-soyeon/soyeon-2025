@@ -10,12 +10,12 @@ import {useState} from "react";
 
 function App() {
 
-  // 커서 위치
+  // 화면 커서 위치
   const [mousePosition, setMousePosition] = useState({x: null, y:null})
   const handleMouseMove = (e) => {
     setMousePosition({x: e.clientX, y:e.clientY})
   }
- // 커서 클래스
+ // 커서 클래스 on/off
   const [mouseName, setMouseName] = useState('normal');
   const mouseOn = () => {
     setMouseName('extend');
