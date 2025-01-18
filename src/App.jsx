@@ -16,12 +16,12 @@ function App() {
     setMousePosition({x: e.clientX, y:e.clientY})
   }
  // 커서 클래스
-  const [mouseClassName, setMouseClassName] = useState('normal');
-  const mouseClassOn = () => {
-    setMouseClassName('extend');
+  const [mouseName, setMouseName] = useState('normal');
+  const mouseOn = () => {
+    setMouseName('extend');
   }
-  const mouseClassOff = () => {
-    setMouseClassName('');
+  const mouseOff = () => {
+    setMouseName('');
   }
 
   return (
@@ -30,14 +30,14 @@ function App() {
      onMouseMove={handleMouseMove} 
      >
       <Visual />
-      <History mouseClassOn={mouseClassOn} mouseClassOff={mouseClassOff} />
-      <Project mouseClassOn={mouseClassOn} mouseClassOff={mouseClassOff} />
-      <Skiils mouseClassOn={mouseClassOn} mouseClassOff={mouseClassOff} />
+      <History mouseOn={mouseOn} mouseOff={mouseOff} />
+      <Project mouseOn={mouseOn} mouseOff={mouseOff} />
+      <Skiils mouseOn={mouseOn} mouseOff={mouseOff} />
       <Footer />
       <Cursor 
         left={mousePosition.x} 
         top={mousePosition.y}
-        mouseClassName={mouseClassName} />
+        mouseName={mouseName} />
     </div>
   )
 }

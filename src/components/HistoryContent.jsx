@@ -1,9 +1,9 @@
-const HistoryContent = ( { mouseClassOn, mouseClassOff, company, position, service, team, work, set }) => {
+const HistoryContent = ( { mouseOn, mouseOff, company, position, service, team, work, set }) => {
   return(
     <>
       <div className="history-cont" 
-        onMouseEnter={mouseClassOn}
-        onMouseLeave={mouseClassOff}>
+        onMouseEnter={mouseOn}
+        onMouseLeave={mouseOff}>
         <h2>
           <span className="company">{company}  </span>
           | <span className="position">{position}</span>

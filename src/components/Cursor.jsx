@@ -1,10 +1,10 @@
 import "../../public/css/invertCursor.css"
 
-const Cursor = ({left, top, mouseClassName}) => {
+const Cursor = ({left, top, mouseName}) => {
 
   return(
     <>
-      <div id="cursor" className={mouseClassName} style={{top:top, left:left}} >
+      <div id="cursor" className={mouseName} style={{top:top, left:left}} >
       </div>
     </>
   )

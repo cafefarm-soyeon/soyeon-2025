@@ -4,7 +4,7 @@ const Footer = () => {
     <>
       <section className="part footer">
         <p className="title ">Contact</p>
-        <ul class="footer-cont">
+        <ul className="footer-cont">
           <li>
             <span className="icon"><img src="../../public/image/icon_email.png" alt="email"/></span>
             <span>hayehfrp@naver.com</span>

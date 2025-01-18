@@ -1,6 +1,6 @@
 import { dataProject } from "../util/dataProject";
 
-const Project = ({mouseClassOn, mouseClassOff}) => {
+const Project = ({mouseOn, mouseOff}) => {
   return(
     <>
       <section className="part project">
@@ -12,8 +12,8 @@ const Project = ({mouseClassOn, mouseClassOff}) => {
               <ul 
                 className="project-cont" 
                 key={item.id} 
-                onMouseEnter={mouseClassOn}
-                onMouseLeave={mouseClassOff}
+                onMouseEnter={mouseOn}
+                onMouseLeave={mouseOff}
               >
                 <li className="project-name">{item.title}</li>
                 <li className="date">진행기간: {item.date}</li>

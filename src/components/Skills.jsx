@@ -1,6 +1,6 @@
 import { dataSkills } from "../util/dataSkills"
 
-const Skills = ({mouseClassOn, mouseClassOff}) => {
+const Skills = ({mouseOn, mouseOff}) => {
   return(
     <>
     <section className="part skills">
@@ -11,8 +11,8 @@ const Skills = ({mouseClassOn, mouseClassOff}) => {
             <ul 
               key={item.id} 
               className="skills-cont flex flex-column"
-              onMouseEnter={mouseClassOn}
-              onMouseLeave={mouseClassOff}>
+              onMouseEnter={mouseOn}
+              onMouseLeave={mouseOff}>
               <li className="flex just-cont-center group">{item.group}</li>
               <li className="flex flex-column list">
                 {item.list.map((lists)=> {
